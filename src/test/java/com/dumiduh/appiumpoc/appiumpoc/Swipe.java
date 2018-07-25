@@ -13,11 +13,12 @@ import io.appium.java_client.android.AndroidElement;
 public class Swipe extends Base{
 
 	@Test
-	public void swipe() throws MalformedURLException {
+	public void swipe() throws MalformedURLException, InterruptedException {
 		AndroidDriver<AndroidElement> driver = Capabilities();
 		TouchAction action = new TouchAction(driver);
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);		
 		driver.findElementByXPath("//android.widget.TextView[@text='Views']").click();
+		Thread.sleep(3000);
 		driver.findElementByXPath("//android.widget.TextView[@text='Date Widgets']").click();
 		driver.findElementByXPath("//android.widget.TextView[@text='2. Inline']").click();
 		driver.findElementByXPath("//*[@content-desc='9']").click();

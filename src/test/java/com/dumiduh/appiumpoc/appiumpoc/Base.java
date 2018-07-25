@@ -13,7 +13,7 @@ public class Base {
 
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException{
 		
-		File f = new File("C:\\Users\\dumiduh\\eclipse-workspace-java\\AppiumTestOne\\src");
+		File f = new File("lib");
 		File completePath = new File(f,"ApiDemos-debug.apk");
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
